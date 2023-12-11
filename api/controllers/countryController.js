@@ -1,4 +1,4 @@
-// userController.js
+
 const Country = require('../models/countryModel');
 
 // Get all country
