@@ -23,9 +23,6 @@ exports.getUserDataWithCountryDetail = async (req, res) => {
 };
 
 
-
-
-
 // Create a new user
 exports.createUser = async (req, res) => {
     try {
