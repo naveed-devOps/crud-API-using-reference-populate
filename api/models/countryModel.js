@@ -1,26 +1,31 @@
-const mongoose = require('mongoose'); 
+const mongoose = require('mongoose');
 
-const CountrySchema = mongoose.Schema({
-     id: {
-      type: String,
-       required: true,
-       unique: true
-     },
-    countryName: {
-        type: String,
-        required: true
-      },
-      countryCode: {
-        type: String,
-      },
-      phoneCode: {
-        type: String,
-      },
-      timeZone: {
-        type: String,
-      },
-    }, { timestamps: true });
+const countrySchema = new mongoose.Schema({
+  countryName: {
+    type: String,
+    required: true
+  },
+  countryCode: {
+    type: String,
+    required: true
+  },
+  city: {
+    type: String,
+    required: true
+  },
+  postalCode: {
+    type: String,
+    required: true
+  },
+  id: {
+    type: String,
+    required: true
+  },
+},
+  {
+    timestamps:true
+  });
 
+const Country = mongoose.model('Country', countrySchema);
 
-const country = mongoose.model('country', CountrySchema);
-module.exports = country;
+module.exports = Country;
